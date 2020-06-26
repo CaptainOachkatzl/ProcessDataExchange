@@ -5,15 +5,15 @@ namespace Assignment
         Consumer m_consumer;
         Producer m_producer;
 
-        public string MessagePrefix {get;set;} = "Process: ";
+        public string ProcessName { get; private set; } = "Process";
 
         public Process(string processName, ConsumerNetworkModule consumerNetworkModule, ProducerNetworkModule producerNetworkModule)
         {
             m_consumer = new Consumer(consumerNetworkModule);
             m_producer = new Producer(producerNetworkModule);
 
-            m_consumer.MessagePrefix = processName + ": ";
-            m_producer.MessagePrefix = processName + ": ";
+            m_consumer.ConsumerName = processName;
+            m_producer.ProducerName = processName;
         }
 
         public void StartReceiving()

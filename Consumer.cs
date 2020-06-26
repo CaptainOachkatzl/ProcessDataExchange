@@ -5,7 +5,7 @@ namespace Assignment
 {
     class Consumer : Actor<DataMessage>
     {
-        public string MessagePrefix = "Consumer: ";
+        public string ConsumerName = "Consumer";
 
         public Consumer(ConsumerNetworkModule networkModule)
         {
@@ -14,7 +14,7 @@ namespace Assignment
 
         override protected void HandleMessage(DataMessage message)
         {
-            Console.WriteLine("{0}Received message.", MessagePrefix);
+            Console.WriteLine("{0} - Received message. Message body: \"{1}\"", ConsumerName, message.MessageBody);
         }
     }
 }
