@@ -17,7 +17,7 @@ namespace Assignment
             while(true)
             {
                 Console.WriteLine("Producer: Sending message.");
-                m_networkModule.SendMessage(new ConsumerMessage());
+                m_networkModule.SendMessage(new DataMessage());
                 Thread.Sleep(2000);
             }
         }

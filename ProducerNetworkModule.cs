@@ -18,7 +18,7 @@ namespace Assignment
             m_connector.Crypto = CryptoType.EC25519;
         }
 
-        public void SendMessage(ConsumerMessage message)
+        public void SendMessage(DataMessage message)
         {
             TCPPacketConnection consumerConnection;
             m_connector.Connect(m_consumerEndpoint, out consumerConnection);

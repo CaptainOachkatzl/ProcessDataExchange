@@ -6,7 +6,7 @@ namespace Assignment
 {
     class ConsumerNetworkModule
     {
-        public delegate void MessageReceivedHandler(object sender, ConsumerMessage message);
+        public delegate void MessageReceivedHandler(object sender, DataMessage message);
         public event MessageReceivedHandler MessageReceived;
 
         public ConsumerNetworkModule(int port)
@@ -19,7 +19,7 @@ namespace Assignment
 
         internal void OnProducerConnected(object sender, TCPPacketConnection connection)
         {
-            MessageReceived.Invoke(this, new ConsumerMessage());
+            MessageReceived.Invoke(this, new DataMessage());
             connection.Disconnect();
         }
     }
