@@ -22,7 +22,7 @@ namespace Assignment
         {
             TCPPacketConnection consumerConnection;
             m_connector.Connect(m_consumerEndpoint, out consumerConnection);
-            consumerConnection.Send(DataMessageSerializer.ToNetworkData(new DataMessage()));
+            consumerConnection.Send(DataMessageSerializer.ToNetworkData(message));
         }
     }
 }

@@ -11,7 +11,7 @@ namespace Assignment
         {
             DataMessage message = new DataMessage();
             message.MessageBody = System.Text.Encoding.ASCII.GetString(networkData);
-            return new DataMessage();
+            return message;
         }
 
         public static byte[] ToNetworkData(DataMessage message)
