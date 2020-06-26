@@ -22,7 +22,7 @@ namespace ProcessDataExchange
 
             // start sending messages in separate thread
             new Thread(processA.StartSending).Start();
-            Thread.Sleep(4000);  // delay producing of process B so log lines are easier to read
+            Thread.Sleep(6000);  // delay producing of process B so log lines are easier to read
             new Thread(processB.StartSending).Start();
 
             new ManualResetEvent(false).WaitOne();     // main thread set to sleep permanently

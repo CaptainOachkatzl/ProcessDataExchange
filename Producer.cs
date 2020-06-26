@@ -21,7 +21,7 @@ namespace ProcessDataExchange
                 string body = string.Format("Data sent by {0}", ProducerName);
                 Console.WriteLine("{0} - Sending message with body: \"{1}\"", ProducerName, body);
                 m_networkModule.SendMessage(ProduceMessage(body));
-                Thread.Sleep(8000);
+                Thread.Sleep(12000);
             }
         }
 
