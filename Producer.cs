@@ -18,16 +18,17 @@ namespace ProcessDataExchange
         {            
             while(true)
             {
-                Console.WriteLine("{0} - Sending message.", ProducerName);
-                m_networkModule.SendMessage(ProduceMessage());
+                string body = string.Format("Data sent by {0}", ProducerName);
+                Console.WriteLine("{0} - Sending message with body: \"{1}\"", ProducerName, body);
+                m_networkModule.SendMessage(ProduceMessage(body));
                 Thread.Sleep(8000);
             }
         }
 
-        DataMessage ProduceMessage()
+        DataMessage ProduceMessage(string body)
         {
             DataMessage message = new DataMessage();
-            message.MessageBody = string.Format("Data sent by {0}", ProducerName);
+            message.MessageBody = body;
             return message;
         }
     }
