@@ -1,3 +1,4 @@
+using System;
 using System.Threading;
 
 namespace Assignment
@@ -15,6 +16,7 @@ namespace Assignment
         {            
             while(true)
             {
+                Console.WriteLine("Producer: Sending message.");
                 m_networkModule.SendMessage(new ConsumerMessage());
                 Thread.Sleep(2000);
             }

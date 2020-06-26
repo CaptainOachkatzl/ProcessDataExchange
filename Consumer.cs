@@ -1,3 +1,4 @@
+using System;
 using XSLibrary.MultithreadingPatterns.Actor;
 
 namespace Assignment
@@ -16,7 +17,7 @@ namespace Assignment
 
         override protected void HandleMessage(ConsumerMessage message)
         {
-            System.Console.WriteLine("Received message.");
+            Console.WriteLine("Consumer: Received message.");
         }
     }
 }
