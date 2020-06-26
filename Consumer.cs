@@ -3,11 +3,6 @@ using XSLibrary.MultithreadingPatterns.Actor;
 
 namespace Assignment
 {
-    class DataMessage
-    {
-
-    }
-
     class Consumer : Actor<DataMessage>
     {
         public string MessagePrefix = "Consumer: ";
