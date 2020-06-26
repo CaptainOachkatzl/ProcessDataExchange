@@ -1,4 +1,4 @@
-namespace Assignment
+namespace ProcessDataExchange
 {
     class DataMessage
     {

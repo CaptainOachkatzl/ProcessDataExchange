@@ -3,7 +3,7 @@ using XSLibrary.Cryptography.ConnectionCryptos;
 using XSLibrary.Network.Acceptors;
 using XSLibrary.Network.Connections;
 
-namespace Assignment
+namespace ProcessDataExchange
 {
     class ConsumerNetworkModule
     {

@@ -2,7 +2,7 @@
 using System.Net;
 using System.Threading;
 
-namespace Assignment
+namespace ProcessDataExchange
 {
     class Program
     {

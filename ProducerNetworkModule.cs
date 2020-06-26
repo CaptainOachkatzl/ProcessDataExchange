@@ -3,7 +3,7 @@ using XSLibrary.Cryptography.ConnectionCryptos;
 using XSLibrary.Network.Connections;
 using XSLibrary.Network.Connectors;
 
-namespace Assignment
+namespace ProcessDataExchange
 {
     class ProducerNetworkModule
     {

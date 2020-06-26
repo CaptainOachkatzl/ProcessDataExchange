@@ -1,7 +1,7 @@
 using System;
 using System.Threading;
 
-namespace Assignment
+namespace ProcessDataExchange
 {
     class Producer
     {

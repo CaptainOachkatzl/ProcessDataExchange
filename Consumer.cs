@@ -1,7 +1,7 @@
 using System;
 using XSLibrary.MultithreadingPatterns.Actor;
 
-namespace Assignment
+namespace ProcessDataExchange
 {
     class Consumer : Actor<DataMessage>
     {
