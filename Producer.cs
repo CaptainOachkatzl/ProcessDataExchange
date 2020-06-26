@@ -7,6 +7,8 @@ namespace Assignment
     {
         ProducerNetworkModule m_networkModule;
 
+        public string MessagePrefix = "Producer: ";
+
         public Producer(ProducerNetworkModule networkModule)
         {
             m_networkModule = networkModule;
@@ -16,9 +18,9 @@ namespace Assignment
         {            
             while(true)
             {
-                Console.WriteLine("Producer: Sending message.");
+                Console.WriteLine("{0}Sending message.", MessagePrefix);
                 m_networkModule.SendMessage(new DataMessage());
-                Thread.Sleep(2000);
+                Thread.Sleep(8000);
             }
         }
     }
