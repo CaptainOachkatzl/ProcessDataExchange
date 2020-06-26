@@ -1,3 +1,4 @@
+using System.Net;
 using XSLibrary.Cryptography.ConnectionCryptos;
 using XSLibrary.Network.Acceptors;
 using XSLibrary.Network.Connections;
@@ -19,7 +20,8 @@ namespace Assignment
 
         internal void OnProducerConnected(object sender, TCPPacketConnection connection)
         {
-            MessageReceived.Invoke(this, new DataMessage());
+            connection.Receive(out byte[] data, out EndPoint endpoint);
+            MessageReceived.Invoke(this, DataMessageSerializer.ToMessage(data));
             connection.Disconnect();
         }
     }
