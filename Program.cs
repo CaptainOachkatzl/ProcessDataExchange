@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Threading;
+using XSLibrary.MultithreadingPatterns.Actor;
 
 namespace Assignment
 {
@@ -6,7 +8,14 @@ namespace Assignment
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Consumer consumer = new Consumer();
+            consumer.Start();
+
+            while(true)
+            {
+                consumer.SendMessage(new ConsumerMessage());
+                Thread.Sleep(2000);
+            }
         }
     }
 }
