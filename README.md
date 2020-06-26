@@ -14,6 +14,6 @@ Strengths:
   - Network/Crypto library is open source. As it is developed and maintained by myself, every part of the project can be adjusted or changed on demand.
   
   Weaknesses:  
-  - System does not guarantee data integrity and relies on underlaying protocols to do error detection/correction.
+  - System does not guarantee data integrity and relies on underlying protocols to do error detection/correction.
   - Library is not an industrial standard. Interoperability with other systems is not guaranteed.
   - The system does not scale. It was built as a proof of concept and would require extra effort to split the system into scalable parts.
