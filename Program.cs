@@ -14,15 +14,19 @@ namespace Assignment
             Process processA = CreateProcess("Process A", portA, portB);
             Process processB = CreateProcess("Process B", portB, portA);
 
+            // process A starts listening to messages on Port A
             processA.StartReceiving();
+
+            // process B starts listening to messages on Port B
             processB.StartReceiving();
 
+            // start sending messages in separate thread
             new Thread(processA.StartSending).Start();
             Thread.Sleep(4000);  // delay producing of process B so log lines are easier to read
             new Thread(processB.StartSending).Start();
 
-            ManualResetEvent halt = new ManualResetEvent(false);
-            halt.WaitOne();     // main thread set to sleep permanently
+            new ManualResetEvent(false).WaitOne();     // main thread set to sleep permanently
+            // program will never reach the end
         }
 
         static Process CreateProcess(string processName, int listeningPort, int remotePort)
