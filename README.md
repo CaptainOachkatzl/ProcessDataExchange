@@ -8,7 +8,7 @@ Console application which emulates 2 processes that are exchanging data via mess
 
 Strengths:  
   - The system runs fully parallel. For each process there are is a single send-thread but receive-threads spawn on demand/connect. Furthermore, the consumer-part of the process runs as an Actor implementation and thus decouples itself completely from network dependencies, guaranteeing that the consumer is never stuck in network read-operations.
-  - Messages are sent with strong encryption. [Curve25519](https://en.wikipedia.org/wiki/Curve25519) is used for the key exchange and [AES256](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) is used for the synchronous data transfer.
+  - Messages are sent with strong encryption. [Curve25519](https://en.wikipedia.org/wiki/Curve25519) is used for the key exchange and [AES256](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) is used for the symmetric data transfer.
   - Message and Serialization are dummy implementations and can be replaced easily by e.g. JSON format.
   - The program is small. Excluding the library-code, the complete program is implemented with effectively 168 lines of code.
   - Network/Crypto library is open source. As it is developed and maintained by myself, every part of the project can be adjusted or changed on demand.
